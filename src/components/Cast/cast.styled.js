@@ -12,3 +12,7 @@ export const Container = styled.div`
      margin-left: auto;
      margin-right: auto;
 `;
+
+export const Span = styled.span`
+font-weight:600;
+`

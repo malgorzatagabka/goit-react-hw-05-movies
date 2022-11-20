@@ -1,9 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { useDetails } from "utils/hooks/useDetails";
 import { BackLink } from "components/BackLink";
 import { Container, Wrapper } from "./details.styled";
+import { StyledLink } from "./home.styled";
 import Loader from "components/Loader/Loader";
 
 const MovieDetailsPage = () => {
@@ -34,14 +35,14 @@ const MovieDetailsPage = () => {
         <h3>Additional Information</h3>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <StyledLink to="cast">Cast</StyledLink>
           </li>
           <li >
-            <Link to="reviews">Reviews</Link>
+            <StyledLink to="reviews">Reviews</StyledLink>
           </li>
         </ul>
    
-      <Suspense fallback= {<div>Loading subpage...</div>}>
+      <Suspense fallback= {<Loader/>}>
         <Outlet />
       </Suspense>
     </div>

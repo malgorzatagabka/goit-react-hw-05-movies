@@ -1,13 +1,13 @@
-
 import { Link, useLocation } from 'react-router-dom';
 import Loader from './Loader/Loader';
 
+
 const Movies = ({ movies }) => {
   const location = useLocation();
-    
-  if (!movies) return <Loader/>;
-  
-    return (
+
+  if (!movies) return <Loader />;
+
+  return (
     <ul>
       {movies.map(movie => {
         return (
@@ -20,5 +20,5 @@ const Movies = ({ movies }) => {
       })}
     </ul>
   );
-};      
+};
 export default Movies;

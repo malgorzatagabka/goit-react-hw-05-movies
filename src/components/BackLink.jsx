@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
   
 
   :hover {
-    color: orangered;
+    color: #9966CC;
   }
 `;
 
